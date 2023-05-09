@@ -61,7 +61,9 @@ header {
     font-size: 1em;
 }
 
-#map { height: 20em; }
+#map { 
+    height: 20em; 
+}
 
 .attribution { 
     font-size: 11px; text-align: center; 
