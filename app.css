@@ -13,10 +13,24 @@ body {
     font-family: 'Barlow', sans-serif;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body > header {
+    flex: 1;
+}
+
+body > main {
+    flex: 2;
 }
 
 header {
     background-image: url('./images/pattern-bg-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-basis: 100;
 }
 
 .search-bar {
@@ -34,12 +48,19 @@ header {
     color: var(--dark-gray); 
 }
 
+main {
+    position: relative;
+    /* flex-basis: 100; */
+    display: flex;
+}
+
 .main-info {
     position: absolute;
     background-color: white;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0px 5px 5px rgb(219, 219, 219);
+    z-index: 2;
 }
 
 .main-info div {
@@ -62,7 +83,9 @@ header {
 }
 
 #map { 
-    height: 20em; 
+    min-height: 50vh;
+    z-index: 0;
+    flex: 1;
 }
 
 .attribution { 
