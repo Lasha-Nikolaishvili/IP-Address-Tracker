@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0 !important;
     padding: 0 !important;
+    font-family: inherit;
 }
 
 :root {
@@ -48,9 +49,21 @@ header {
     color: var(--dark-gray); 
 }
 
+.search-input {
+    font-weight: 400;
+    padding: .7em 1em !important;
+}
+
+.search-btn {
+    transition: 150ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.search-btn:hover, .search-btn:active {
+    background-color: var(--very-dark-gray) !important;
+}
+
 main {
     position: relative;
-    /* flex-basis: 100; */
     display: flex;
 }
 

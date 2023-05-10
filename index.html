@@ -21,28 +21,28 @@
   <header class="pb-5">
     <h1 class="text-center text-light fs-2 pt-5">IP Address Tracker</h1>
     <div class="input-group mt-3 search-bar mx-auto pb-5">
-      <input type="search" class="form-control p-2 px-3 rounded-start-3" placeholder="Search for any IP address or domain">
-      <button class="input-group-text fw-bold bg-black text-light px-3 rounded-end-3">></button>
+      <input type="search" class="form-control rounded-start-3 search-input" placeholder="Search for any IP address or domain">
+      <button class="input-group-text fw-bold bg-black text-light px-3 rounded-end-3 search-btn"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button>
     </div>
     
   </header>
   <main>
     <div class="bg-light d-flex justify-content-center p-4 rounded-3 main-info">
       <div class="pe-3">
-        <h2>IP ADDRESS</h2>
-        <p>192.212.174.101</p>
+        <h2><small>IP ADDRESS</small></h2>
+        <p class="ip-addr">192.212.174.101</p>
       </div>
       <div class="px-3">
-        <h2>LOCATION</h2>
-        <p>Brooklyn, NY 10001</p>
+        <h2><small>LOCATION</small></h2>
+        <p class="loc">Brooklyn, NY 10001</p>
       </div>
       <div class="px-3">
-        <h2>TIMEZONE</h2>
-        <p>UTC <span class="offset">-05:00</span></p>
+        <h2><small>TIMEZONE</small></h2>
+        <p class="timez">UTC <span class="offset">-05:00</span></p>
       </div>
       <div class="ps-3">
-        <h2>ISP</h2>
-        <p>SpaceX Starlink</p>
+        <h2><small>ISP</small></h2>
+        <p class="isp">SpaceX Starlink</p>
       </div>
     </div>
     <div id="map"></div>
