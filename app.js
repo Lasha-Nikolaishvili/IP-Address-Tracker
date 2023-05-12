@@ -5,14 +5,14 @@ function setMainInfo(response) {
     const isp = document.querySelector('.isp');
 
     ipAddr.innerHTML = `${response.data.ip}`;
-    loc.innerHTML = `${response.data.location.city}, ${response.data.location.country}, ${response.data.location.postalCode}`;
+    loc.innerHTML = `${response.data.location.city}, ${response.data.location.country} ${response.data.location.postalCode}`;
     timez.innerHTML = `UTC ${response.data.location.timezone}`;
     isp.innerHTML = `${response.data.isp}`;
 }
 
 function setupMap(response) {
     map.setView([response.data.location.lat, response.data.location.lng], 13);
-        
+    L.control.zoom(false);
     let icon = L.icon({
         iconUrl: './images/icon-location.svg',
         iconSize: [35, 46],
@@ -44,7 +44,9 @@ async function setLocation(ipAddress) {
     }
 }
 
-let map = L.map('map');
+let map = L.map('map', {
+    zoomControl: false
+});
 
 setLocation();
 
